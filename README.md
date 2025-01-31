@@ -39,7 +39,7 @@ This project makes use of JupyterHub as the backend, so it requires JupyterHub.
 2.  Access JupyterHub
 
 - Open your browser and navigate to [sign up page](http://localhost:8000/hub/signup)
-- Create an admin user with the following credentials: make sure username remain admin
+- Create an admin user; make sure username remain admin
 - After logging in, navigate to the [Token](http://localhost:8000/hub/token) page to generate an authentication token for further use.
 - Use this token in _src/services/api.ts_ as "JUPYTERHUB_API_TOKEN"
 
