@@ -26,23 +26,28 @@ src/
 
 This project makes use of JupyterHub as the backend, so it requires JupyterHub.
 
-- JupyterHub Setup
+### JupyterHub Setup
 
-  1.  Run JupyterHub via Docker Compose
+1.  Run JupyterHub via Docker Compose
 
-          ```
-          git clone https://github.com/jupyterhub/jupyterhub-deploy-docker.git
-          cd jupyterhub-deploy-docker/basic-example
-          docker-compose up
-          ```
+        ```
+        git clone https://github.com/jupyterhub/jupyterhub-deploy-docker.git
+        cd jupyterhub-deploy-docker/basic-example
+        docker-compose up
+        ```
 
-  2.  Access JupyterHub
+2.  Access JupyterHub
 
-  - Open your browser and navigate to: http://localhost:8000/hub/signup
-  - Create an admin user with the following credentials: make sure username remain admin
+- Open your browser and navigate to [sign up page](http://localhost:8000/hub/signup)
+- Create an admin user with the following credentials: make sure username remain admin
+- After logging in, navigate to the [Token](http://localhost:8000/hub/token) page to generate an authentication token for further use.
+- Use this token in _src/services/api.ts_ as "JUPYTERHUB_API_TOKEN"
 
-- Repyter Setup
-  ```
-  yarn
-  yarn dev
-  ```
+After setting up JupyterHub as the backend, just run it like a normal React app
+
+### Repyter Setup
+
+```
+yarn
+yarn dev
+```
