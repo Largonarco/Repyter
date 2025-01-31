@@ -51,3 +51,5 @@ After setting up JupyterHub as the backend, just run it like a normal React app
 yarn
 yarn dev
 ```
+
+After all this, use the app at http://localhost:5173
